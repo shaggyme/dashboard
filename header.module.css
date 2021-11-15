@@ -1,0 +1,123 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .MobileHeader {
+        display: inline;
+    }
+
+    .DesktopHeader {
+        display: block;
+    }
+
+    .searchContainer {
+        display: flex;
+        height: 35px;
+        width: 500px;
+        margin-top: -50px;
+        margin-left: 500px;
+    }
+
+    .iconsContainer {
+        position: absolute;
+        top:  -10px;
+        left: 50%;
+        display: flex;
+        margin: 3px 50px 5px 300px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .searchContainer {
+        display: flex;
+        height: 35px;
+        width: 500px;
+        margin-top: -50px;
+        margin-left: 500px;
+    }
+
+    .iconsContainer {
+        position: absolute;
+        top:  -10px;
+        left: 50%;
+        display: flex;
+        margin: 3px 50px 5px 300px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .searchContainer {
+        display: flex;
+        height: 35px;
+        width: 500px;
+        margin-top: -50px;
+        margin-left: 500px;
+    }
+
+    .iconsContainer {
+        position: absolute;
+        top:  -10px;
+        left: 50%;
+        display: flex;
+        margin: 3px 50px 5px 300px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+.headerContainer {
+        display: inline;
+        text-align: center;
+        width: 100%;
+        
+    }
+    
+    .searchContainer {
+        display: flex;
+        height: 35px;
+        width: 375px;
+        margin-top: -50px;
+        margin-left: 500px;
+    }
+    
+    .iconsContainer {
+        position: absolute;
+        top:  -12px;
+        left: 50%;
+        display: flex;
+        margin: 3px 50px 5px 300px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .MobileHeader {
+        display: block;
+    }
+
+    .DesktopHeader {
+        display: inline;
+    }
+    .headerContainer {
+        display: inline;
+        text-align: center;
+        width: 100%;
+        
+    }
+    
+    .searchContainer {
+        display: flex;
+        height: 35px;
+        width: 375px;
+        margin-top: -50px;
+        margin-left: 500px;
+    }
+    
+    .iconsContainer {
+        position: absolute;
+        top:  -12px;
+        left: 50%;
+        display: flex;
+        margin: 3px 50px 5px 300px;
+    }
+}
