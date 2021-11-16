@@ -1,0 +1,15 @@
+.sidebarContainer{
+    width: 20%;
+    background-color: white;
+    height: 570px;
+    width: 150px;
+}
+
+.logoStyle{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
