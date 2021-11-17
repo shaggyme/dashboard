@@ -2,7 +2,7 @@ import React from "react";
 import classes from './sidebar.module.css';
 import logo from '../assets/images/logo.svg';
 import Grid from '@mui/material/Grid';
-import { Button, Paper, Link } from "@mui/material";
+import { Button, Paper, Link, Box } from "@mui/material";
 
 const Sidebar = () => {
     return(
@@ -10,8 +10,10 @@ const Sidebar = () => {
           <Grid>
            <img className={classes.logoStyle} src={logo} alt='logo'></img>
           </Grid>
-          <Grid style={{backgroundColor: "blue", textAlign: 'center', color: 'white', marginBottom: '10px'}}>
+          <Grid style={{backgroundColor: "green", textAlign: 'center', color: 'white', marginBottom: '10px', borderRadius: '20px', height: '35px', padding: '3px'}}>
+          <Box>
             Dashboard
+          </Box>  
           </Grid>
           <Grid style={{textAlign: "center"}}> 
           <Button variant="text">
