@@ -10,7 +10,8 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import SearchIcon from '@mui/icons-material/Search';
 import Badge from '@mui/material/Badge';
 import axios from 'axios';
-import { AppBar, Box, Paper } from '@mui/material';
+import { AppBar, Box, Grid,} from '@mui/material';
+
 
 const Header = () => {
 
@@ -112,7 +113,8 @@ const Header = () => {
       //   </AppBar>
       //   </Box>
       // </div>
-      <div className = {classes.DesktopHeader}>
+
+      <Grid className = {classes.DesktopHeader}>
         <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
         <Toolbar style={{position: 'relative', margin: '15px 400px 15px 150px'}}>
@@ -150,7 +152,7 @@ const Header = () => {
           </Toolbar>
           </AppBar>
           </Box>
-      </div>
+      </Grid>
     )
   }
   return(
