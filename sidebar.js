@@ -10,7 +10,7 @@ const Sidebar = () => {
           <Grid>
            <img className={classes.logoStyle} src={logo} alt='logo'></img>
           </Grid>
-          <Grid style={{backgroundColor: "green", textAlign: 'center', color: 'white', marginBottom: '10px', borderRadius: '20px', height: '35px', padding: '3px'}}>
+          <Grid style={{backgroundColor:'deepskyblue', textAlign: 'center', color: 'white', marginBottom: '8px', borderRadius: '20px', height: '35px', padding: '5px'}}>
           <Box>
             Dashboard
           </Box>  
