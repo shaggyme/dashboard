@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { styled, alpha } from '@mui/material/styles';
 import classes from './header.module.css';
 import Toolbar from '@mui/material/Toolbar';
-import InputBase from '@mui/material/InputBase';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import SearchIcon from '@mui/icons-material/Search';
 import SettingsIcon from '@mui/icons-material/Settings';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import SearchIcon from '@mui/icons-material/Search';
 import Badge from '@mui/material/Badge';
 import axios from 'axios';
-import { AppBar, Box, Grid,} from '@mui/material';
+import { Grid, TextField} from '@mui/material';
 
 
 const Header = () => {
@@ -42,45 +40,6 @@ const Header = () => {
     })
   }
 
-  const Search = styled('div')(({ theme }) => ({
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.black, 0.15),
-    '&:hover': {
-      backgroundColor: alpha(theme.palette.common.black, 0.25),
-    },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(3),
-      width: '200px',
-    },
-  }));
-  
-  const SearchIconWrapper = styled('div')(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }));
-
-  const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: 'inherit',
-    '& .MuiInputBase-input': {
-      padding: theme.spacing(1, 1, 1, 0),
-      // vertical padding + font size from searchIcon
-      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-      transition: theme.transitions.create('width'),
-      width: '100%',
-      [theme.breakpoints.up('md')]: {
-        width: '20ch',
-      },
-    },
-  }));
   let container = null;
   if (userData) {
     container=(
@@ -115,9 +74,7 @@ const Header = () => {
       // </div>
 
       <Grid className = {classes.DesktopHeader}>
-        <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-        <Toolbar style={{position: 'relative', margin: '15px 400px 15px 150px'}}>
+        <Toolbar style={{position: 'relative', margin: '10px', left: '80px'}}>
           <div className={classes.col}>
           <AccountCircleIcon style={{fontSize: 80}}/>
           </div>
@@ -126,32 +83,22 @@ const Header = () => {
           <h4 style={{marginLeft: '20px', textAlign: 'left', marginTop: '0px'}}>{userData.roll}</h4>
           </div>
         </Toolbar>
-        <Toolbar style={{position: 'absolute', top: '50px' , left: '10%'}}>
-          <div className={classes.searchContainer}>
-            <Search>
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search"
-                inputProps={{ 'aria-label': 'search' }}
-              />
-            </Search>
+        <Toolbar className={classes.searchContainer}>
+          <div style={{borderRadius: '20px', backgroundColor: 'white'}}>
+             <TextField id="standard-basic" label="Search" variant="standard" />
           </div>
-          <div className={classes.iconsContainer}>
+          <div style={{backgroundImage: 'linear-gradient(to right, green, blue, purple', borderRadius: '20px'}}>
             <Badge>
-              <NotificationsIcon style={{padding: '4px'}}/>
+              <NotificationsIcon style={{padding: '7px'}}/>
             </Badge>
             <Badge>
-              <MailOutlineIcon style={{padding: '4px'}}/>
+              <MailOutlineIcon style={{padding: '7px'}}/>
             </Badge>
             <Badge>
-              <SettingsIcon style={{padding: '4px'}}/>
+              <SettingsIcon style={{padding: '7px'}}/>
             </Badge>
-          </div>
+          </div>  
           </Toolbar>
-          </AppBar>
-          </Box>
       </Grid>
     )
   }
