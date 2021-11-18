@@ -68,7 +68,7 @@
 @media only screen and (min-width: 992px) {
     .DesktopHeader{
         width: 89%;
-        margin-left: 11%;
+        margin-left: 6%;
     }
 
     .headerContainer {
@@ -80,10 +80,13 @@
     
     .searchContainer {
         display: flex;
-        height: 35px;
-        width: 375px;
-        margin-top: -50px;
-        margin-left: 500px;
+        height: 10px;
+        width: 400px;
+        margin-left: 450px;
+        position: absolute; 
+        left: 25%; 
+        border-radius: 100px; 
+        background-color: 'chocolate';
     }
     
     .iconsContainer {
@@ -103,7 +106,7 @@
 
     .DesktopHeader {
         width: 89%;
-        margin-left: 11%;
+        margin-left: 6%;
     }
 
     .headerContainer {
@@ -115,16 +118,19 @@
     
     .searchContainer {
         display: flex;
-        height: 35px;
-        width: 375px;
-        margin-top: -50px;
-        margin-left: 500px;
+        position: absolute; 
+        height: 10px;
+        width: 500px;
+        top: -50px;
+        margin-left: 250px;
+        border-radius: 100px; 
+
     }
     
     .iconsContainer {
         position: absolute;
         top:  -12px;
-        left: 50%;
+        left: 70%;
         display: flex;
         margin: 3px 50px 5px 300px;
     }
